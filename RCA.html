@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quarter 2</title>
+  <style>
+    /* Add some styles to the body */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Add styles for the slideshow container */
+     /* Add styles for the slideshow container */
+     .slideshow-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Add styles for the slideshow images */
+    .slideshow-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    /* Add styles for the active image */
+    .slideshow-image.active {
+      opacity: 1;
+    }
+
+    /* Create a sticky navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      z-index: 999;
+    }
+
+    /* Add some styles to the navbar links */
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      display: inline-block;
+    }
+
+    .navbar a:hover {
+      
+      background-color: #d7d7d7;
+    }
+
+    .active {
+        background-color: #555;
+    }
+
+    /* Add some padding to the main content */
+    .content {
+      padding-top: 160px;
+      text-align: center;
+    }
+
+    table, th, td {
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  border-collapse: collapse;
+  width: 1500px;
+  font-size: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+#Whys h1{
+    padding-top: 80px;
+    padding-top: 80px;animation: slideUp 4s ease;
+
+}
+
+#Whys img { 
+    animation: slideUp 5s ease;
+    width: 800px;
+}
+
+.Diagram h1{
+    padding-top: 80px;
+animation: slideUp 5s ease;
+
+}
+
+.Diagram img { 
+    animation: slideUp 6s ease;
+    width: 800px;
+}
+
+.RCA h1{
+        animation: slideUp 2s ease;
+    }
+
+
+    .RCA table{
+        animation: slideUp 3s ease;
+    }
+
+    /* Define the slideUp animation */
+    @keyframes slideUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    
+  </style>
+</head>
+<body>
+  <!-- Slideshow Background -->
+  <div class="slideshow-container">
+    <img class="slideshow-image active" src="Yes gender ineuqality.png" alt="Image 1">
+    <img class="slideshow-image" src="Cooler.jpg" alt="Image 2">
+    <img class="slideshow-image" src="Better.jpg" alt="Image 3">
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="RCA.html" class="active">RCA</a>
+        <a href="Solutions.html">Solutions</a>
+        <a href="Outline.html">Outline</a>
+        <a href="Resources.html">Resources</a>
+        <a href="About.html">About us</a>
+      </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="RCA">
+        <h1 style="font-size: 50px;">RCA</h1>
+    <table style="margin: 0 auto;">
+        <tr>
+          <td>Numbers</td>
+          <td>Main Cause</td>
+          <td>Root Cause</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Men are viewed as strong and powerful while women were viewed as the one who takes care of the family, the one who feeds it and makes it grow.</td>
+          <td>Gender difference in upper body strength between men and women.
+        </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Men were usually employed as soldiers, sailors, and everything that needed hard work. While women are never either employed or did lighter tasks like being a baker or a cook.</td>
+          <td>Physically capability of women since their anatomy was different from men</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Roles and expectations have evolved and continue to change over time.</td>
+          <td>Religious beliefs</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>In the prehistoric times, men were hunters and women were gatherers. Women were also not physically capable of being able to hunt because their anatomy was different from men. And because men were hunters, they drove the evolution of humans.
+        </td>
+          <td>Cultural practice</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td></td>
+          <td>Societal Expectations</td>
+        </tr>
+      </table>
+    </div>
+    <div id="Whys">
+        <h1 style="font-size: 50px;">5 Whys</h1>
+        <img src="5-Whys.png" alt="">
+    </div>
+    <div class="Diagram">
+        <h1 style="font-size: 50px;">Diagram</h1>
+        <img src="Star Diagram.png" alt="">
+        <br>
+        <img src="Mind Mapping.png" alt="">
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code to handle the slideshow background
+    var images = document.querySelectorAll('.slideshow-image');
+    var currentImageIndex = 0;
+
+    function showNextImage() {
+      // Hide the current image
+      images[currentImageIndex].classList.remove('active');
+
+      // Update the current image index
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+
+      // Show the next image
+      images[currentImageIndex].classList.add('active');
+    }
+
+    // Set the interval to switch images (every 3 seconds in this example)
+    setInterval(showNextImage, 3000);
+  </script>
+</body>
+</html>

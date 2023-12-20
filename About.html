@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quarter 2</title>
+  <style>
+    /* Add some styles to the body */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+
+
+    /* Create a sticky navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      z-index: 999;
+    }
+
+    /* Add some styles to the navbar links */
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      display: inline-block;
+    }
+
+    .navbar a:hover {
+      
+      background-color: #d7d7d7;
+    }
+
+    .active {
+        background-color: #555;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+/* Page3 start */
+#page3 {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  width: 100vw;
+  background: Linear-gradient(white,whitesmoke);
+  overflow: hidden;
+}
+
+#page3 h1 {
+  font-family: "Oxygen", sans-serif;
+  color: black;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-size: 50px;
+  padding: 1em 0;
+}
+
+.p3-cards-conatiner {
+  height: 60vh;
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 15em;
+  padding: 1em;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.p3-cards-conatiner img {
+  border-radius: 5%;
+  object-fit: cover;
+  height: 80%;
+  width: 100%;
+}
+
+.p3-cards-conatiner a {
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  color: #0e5540;
+  font-family: "Marcellus", serif;
+  text-decoration: none;
+  display: block;
+  justify-self: center;
+  position: absolute;
+  bottom: 10%;
+  width: 80%;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#cardContainerP3 {
+  display: grid;
+  place-content: center;
+  grid-auto-flow: column;
+  gap: 1em;
+}
+
+svg {
+  fill: black;
+}
+
+/* Page3 end */
+
+    /* Define the slideUp animation */
+    @keyframes slideUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+        <a href="RCA.html">RCA</a>
+        <a href="Solutions.html">Solutions</a>
+        <a href="Outline.html">Outline</a>
+        <a href="Resources.html">Resources</a>
+        <a href="About.html" class="active">About us</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="content">
+    <div id="page3">
+      <h1 style="animation: slideUp 0.5s ease;">About</h1>
+      <!-- <div class="p3scrollCards">
+              <button type="button" onclick="moveCardsLeft()">←</button>
+              <button type="button" onclick="moveCardsRight()">→</button>
+          </div> -->
+      <div id="cardContainerP3">
+        <!-- Card 1 -->
+        <div style="animation: slideUp 1s ease;" class="p3-cards-conatiner">
+          <img src="Franchesca-KissPfp.jpg" alt="">
+          <a href="#" class="cardsButton">Franchesca Kiss Pascor</a>
+        </div>  
+        <!-- Card 2 -->
+        <div class="p3-cards-conatiner" style="animation: slideUp 2s ease;">
+          <img src="JohnChrispfp.jpg" alt="">
+          <a href="#" class="cardsButton">John Chris Paraiso</a>
+        </div>
+        <!-- Card 3 -->
+        <div class="p3-cards-conatiner" style="animation: slideUp 3s ease;">
+          <img src="Angel-GavriellePfp.jpg" alt="">
+          <a href="#" class="cardsButton">Angel Gavrielle Laron</a>
+        </div>
+        <!-- Card 4 -->
+        <div class="p3-cards-conatiner" style="animation: slideUp 4s ease;">
+          <img src="Aaron-EuwanPfp.jpg" alt="">
+          <a href="#" class="cardsButton">Aaron Euwan Riego</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

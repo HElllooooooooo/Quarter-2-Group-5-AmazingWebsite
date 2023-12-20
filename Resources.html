@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quarter 2</title>
+  <style>
+    /* Add some styles to the body */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Add styles for the slideshow container */
+    .slideshow-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Add styles for the slideshow images */
+    .slideshow-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    /* Add styles for the active image */
+    .slideshow-image.active {
+      opacity: 1;
+    }
+
+    /* Create a sticky navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      z-index: 999;
+    }
+
+    /* Add some styles to the navbar links */
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      display: inline-block;
+    }
+
+    .navbar a:hover {
+      
+      background-color: #d7d7d7;
+    }
+
+    .active {
+        background-color: #555;
+    }
+
+    /* Add some padding to the main content */
+    .content {
+      padding-top: 200px;
+      text-align: center;
+    }
+
+    table, th, td {
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  border-collapse: collapse;
+  width: 700px;
+  font-size: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+table {
+    animation: slideUp 3s ease;
+}
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /* Define the slideUp animation */
+    @keyframes slideUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Slideshow Background -->
+  <div class="slideshow-container">
+    <img class="slideshow-image active" src="Yes gender ineuqality.png" alt="Image 1">
+    <img class="slideshow-image" src="Cooler.jpg" alt="Image 2">
+    <img class="slideshow-image" src="Better.jpg" alt="Image 3">
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+        <a href="RCA.html">RCA</a>
+        <a href="Solutions.html">Solutions</a>
+        <a href="Outline.html">Outline</a>
+        <a href="Resources.html" class="active">Resources</a>
+        <a href="About.html">About us</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="content">
+    <h1 style="font-size: 50px; animation: slideUp 1s ease;">Resource Links</h1>
+    <table style="margin: 0 auto;">
+        <tr>
+          <td><a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-elimination-all-forms-discrimination-against-women#:~:text=PART%20IV-,Article%2015,opportunities%20to%20exercise%20that%20capacity.">Convention on the Elimination of All Forms of Discrimination against Women New York, 18 December 1979 | OHCHR</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-elimination-all-forms-discrimination-against-women#:~:text=PART%20IV-,Article%2015,opportunities%20to%20exercise%20that%20capacity.">Convention on the Elimination of All Forms of Discrimination against Women New York, 18 December 1979 | OHCHR</a></td>
+
+        </tr>
+        <tr>
+          <td><a href="https://en.wikipedia.org/wiki/Act_of_Succession_(Denmark)#:~:text=Following%20a%20referendum%20in%202009,the%20throne%20regardless%20of%20sex.">Act of Succession (Denmark) - Wikipedia</a></td>
+
+        </tr>
+        <tr>
+          <td><a href="https://www.ccre.org/docs/charte_egalite_en.pdf">European charter for equality of women and men in local life</a></td>
+
+        </tr>
+        <tr>
+          <td><a href="https://pcw.gov.ph/summary-of-articles-and-provisions/">Summary of articles and provisions - Philippine Commission on Women</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=H0080067">Gender Equity Education Act - Article Content - Laws & Regulations Database of The Republic of China (Taiwan)</a></td>
+        </tr>
+      </table>
+  </div>
+
+  <script>
+    // JavaScript code to handle the slideshow background
+    var images = document.querySelectorAll('.slideshow-image');
+    var currentImageIndex = 0;
+
+    function showNextImage() {
+      // Hide the current image
+      images[currentImageIndex].classList.remove('active');
+
+      // Update the current image index
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+
+      // Show the next image
+      images[currentImageIndex].classList.add('active');
+    }
+
+    // Set the interval to switch images (every 3 seconds in this example)
+    setInterval(showNextImage, 3000);
+  </script>
+</body>
+</html>

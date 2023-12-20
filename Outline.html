@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quarter 2</title>
+  <style>
+    /* Add some styles to the body */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Add styles for the slideshow container */
+    .slideshow-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Add styles for the slideshow images */
+    .slideshow-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    /* Add styles for the active image */
+    .slideshow-image.active {
+      opacity: 1;
+    }
+
+    /* Create a sticky navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      z-index: 999;
+    }
+
+    /* Add some styles to the navbar links */
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      display: inline-block;
+    }
+
+    .navbar a:hover {
+      
+      background-color: #d7d7d7;
+    }
+
+    .active {
+        background-color: #555;
+    }
+
+    /* Add some padding to the main content */
+    .content {
+      padding-top: 150px;
+      text-align: center;
+      padding-left: 250px;
+    }
+
+   .content pre {
+    text-align: left;
+    font-size: 20px;
+   }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /* Define the slideUp animation */
+    @keyframes slideUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Slideshow Background -->
+  <div class="slideshow-container">
+    <img class="slideshow-image active" src="Yes gender ineuqality.png" alt="Image 1">
+    <img class="slideshow-image" src="Cooler.jpg" alt="Image 2">
+    <img class="slideshow-image" src="Better.jpg" alt="Image 3">
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+        <a href="RCA.html">RCA</a>
+        <a href="Solutions.html">Solutions</a>
+        <a href="Outline.html" class="active">Outline</a>
+        <a href="Resources.html">Resources</a>
+        <a href="About.html">About us</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="content">
+    <h1 style="font-size: 50px; animation: slideUp 1s ease;">Outline</h1>
+    <pre style="animation: slideUp 3s ease;">
+I. Why are men viewed as strong and powerful while women are viewed as taking care of the family, feeding and caring for it?
+   1. Gender differences in physical strength between men and women.
+   2. The physical abilities of women because their anatomy is different from men
+   3. Religious belief
+   4. Cultural training
+   5. Social Expectations
+II. Laws enacted to prevent unequal treatment of women.
+   1. Convention on the Elimination of All Forms of Discrimination Against Women or CEDAW (United Nations, 1979)
+   2. Danish Act of Succession referendum, 2009
+   3. Equal Pay Act of 1963 (United States)
+   4. Equality Act 2006 (UK)
+   5. Equality Act 2010 (UK)
+   6. European charter for equality of women and men in local life
+   7. Gender Equality Duty in Scotland
+   8. Gender Equity Education Act (Taiwan)
+   9. Lilly Ledbetter Fair Pay Act (United States, 2009)
+   10. List of gender equality lawsuits
+   11. Paycheck Fairness Act (in the US)
+   12. Title IX of the Education Amendments of 1972 (United States)
+   13. Uniform civil code (India)
+   14. Women's Petition to the National Assembly (France, 1789)
+III. Organizations promoting Gender Equality
+   1. Afghan Ministry of Women Affairs (Afghanistan)
+   2. Center for Development and Population Activities
+   3. Christians for Biblical Equality
+   4. Committee on Women's Rights and Gender Equality (European Parliament)
+   5. Equal Opportunities Commission (UK)
+   6. European Institute for Gender Equality
+   7. Gender Empowerment Measure, a metric used by the United Nations
+   8. Gender-related Development Index, a metric used by the United Nations
+   9. Government Equalities Office (UK)
+   10. International Center for Research on Women
+   11. Ministry of Integration and Gender Equality (Sweden)
+   12. Ministry of Women, Family and Community Development (Malaysia)
+   13. Philippine Commission on Women (Philippines)
+   14. Total E-Quality (Germany)
+IV. Other noted issues related to gender treatment
+   1. Global Gender Gap Report
+   2. Women's Equality Day
+   3. International Men's Day
+   4. Potty parity
+V. Conclusion
+   1. Things that individual citizens and every family member must do.
+   2. What the government should do to inform the people about the laws and the negative effects of the unequal treatment of women and men
+    </pre>
+  </div>
+
+  <script>
+    // JavaScript code to handle the slideshow background
+    var images = document.querySelectorAll('.slideshow-image');
+    var currentImageIndex = 0;
+
+    function showNextImage() {
+      // Hide the current image
+      images[currentImageIndex].classList.remove('active');
+
+      // Update the current image index
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+
+      // Show the next image
+      images[currentImageIndex].classList.add('active');
+    }
+
+    // Set the interval to switch images (every 3 seconds in this example)
+    setInterval(showNextImage, 3000);
+  </script>
+</body>
+</html>

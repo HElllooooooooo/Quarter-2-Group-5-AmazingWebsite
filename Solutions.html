@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quarter 2</title>
+  <style>
+    /* Add some styles to the body */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Add styles for the slideshow container */
+    .slideshow-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Add styles for the slideshow images */
+    .slideshow-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    /* Add styles for the active image */
+    .slideshow-image.active {
+      opacity: 1;
+    }
+
+    /* Create a sticky navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      z-index: 999;
+    }
+
+    /* Add some styles to the navbar links */
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      display: inline-block;
+    }
+
+    /* Add a cool hover effect to the navbar links */
+    .navbar a:hover {
+      
+      background-color: #d7d7d7;
+    }
+
+    .active {
+        background-color: #555;
+    }
+
+    /* Add some padding to the main content */
+    .content {
+      padding-top: 200px;
+      text-align: center;
+    }
+
+    
+table
+{
+    animation: slideUp 3s ease;
+}
+
+    table, th, td {
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  border-collapse: collapse;
+  width: 1500px;
+  font-size: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+.Final-Solution pre{
+    font-size: 20px;
+    margin: 0 auto;
+    
+}
+
+.FSD {
+    background-color: aquamarine;
+    border: 1px solid black;
+    border-radius: 60px;
+    margin: 0 auto;
+    animation: slideUp 5s ease;
+}
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /* Define the slideUp animation */
+    @keyframes slideUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Slideshow Background -->
+  <div class="slideshow-container">
+    <img class="slideshow-image active" src="Yes gender ineuqality.png" alt="Image 1">
+    <img class="slideshow-image" src="Cooler.jpg" alt="Image 2">
+    <img class="slideshow-image" src="Better.jpg" alt="Image 3">
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="RCA.html">RCA</a>
+    <a href="#" class="active">Solutions</a>
+    <a href="Outline.html">Outline</a>
+    <a href="Resources.html">Resources</a>
+    <a href="About.html">About us</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="Identified-Solutions">
+        <h1 style="font-size: 50px; animation: slideUp 1s ease;">Identified Solutions</h1>
+        <table style="margin: 0 auto;">
+            <tr>
+                <td>Solutions</td>
+                <td>Solutions Info</td>
+                <td>Resources Link</td>
+              </tr>
+            <tr>
+              <td>Article 15 of Convention on the Elimination of All Forms of Discrimination Against Women (CEDAW): Equality before the law</td>
+              <td>Women and men are equal before the law. Women have the legal right to enter contracts, own property, and choose their place of residence.</td>
+              <td><a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-elimination-all-forms-discrimination-against-women#:~:text=PART%20IV-,Article%2015,opportunities%20to%20exercise%20that%20capacity.">Convention on the Elimination of All Forms of Discrimination against Women New York, 18 December 1979 | OHCHR</a>
+            </td>
+            </tr>
+            <tr>
+              <td>Article 16 of Convention on the Elimination of All Forms of Discrimination Against Women (CEDAW): Marriage and family</td>
+              <td>Women have equal rights with men in matters related to marriage and family relations.
+            </td>
+              <td><a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-elimination-all-forms-discrimination-against-women#:~:text=PART%20IV-,Article%2015,opportunities%20to%20exercise%20that%20capacity.">Convention on the Elimination of All Forms of Discrimination against Women New York, 18 December 1979 | OHCHR</a>
+            </td>
+            </tr>
+            <tr>
+              <td>Other noted issues related to gender treatment</td>
+              <td>Setting targets or reserving a certain percentage of positions for women, gender quotas look to address the underrepresentation of women and promote gender equality. This approach has been implemented in several countries and organizations to create more opportunities and equal representation for women.</td>
+              <td><a href="https://en.wikipedia.org/wiki/Act_of_Succession_(Denmark)#:~:text=Following%20a%20referendum%20in%202009,the%20throne%20regardless%20of%20sex.">Act of Succession (Denmark) - Wikipedia</a></td>
+            </tr>
+            <tr>
+              <td>European charter for equality of women and men in local life: Elimination of gender stereotypes</td>
+              <td>Local and regional authorities must get rid of the stereotypes and obstacles upon which the inequalities in status and condition of women are based, and give rise to the unequal opinion of the roles of women and men in political, economic, social and cultural terms.</td>
+              <td><a href="https://www.ccre.org/docs/charte_egalite_en.pdf">European charter for equality of women and men in local life </td>
+            </tr>
+            <tr>
+              <td>Article 3 of The Philippine Commission Women: Equality</td>
+              <td>This article states that women are fundamentally equal with men in all spheres of life. Countries must take a lot of measures to uphold women’s equality in the political, social, economic, and cultural fields.</a>
+            </td>
+              <td><a href="https://pcw.gov.ph/summary-of-articles-and-provisions/">Summary of articles and provisions - Philippine Commission on Women</a></td>
+            </tr>
+            <tr>
+              <td>Gender Equity Education Act of Taiwan</td>
+              <td>The Gender Equality Education Act of Taiwan was enacted on June 23, 2004. The General Provisions stated the purposes of this act: "to promote substantive gender equality, eliminate gender discrimination, uphold human dignity, and improve and establish education resources and environment of gender equality."</a></td>
+              <td><a href="https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=H0080067">Gender Equity Education Act - Article Content - Laws & Regulations Database of The Republic of China (Taiwan)</td>
+            </tr>
+          </table>
+    </div>
+    <div class="Final-Solution">
+        <h1 style="font-size: 50px; animation: slideUp 4s ease;">Final Solution</h1>
+        <div class="FSD">
+        <pre>
+            European charter for equality of women and men in local life: Elimination of gender stereotypes
+
+    Local and regional authorities must get rid of the stereotypes and obstacles upon which the inequalities in status and condition of women are based,
+    and give rise to the unequal opinion of the roles of women and men in political, economic, social and cultural terms.
+
+    It is a document that suggests that women and men should be equal in political, economic, social and cultural terms.
+    Closely linked to the principle of subsidiarity, there are the principles of local and regional self-government.
+    The Council of Europe’s Charter of Local Self-Government of 1985, signed and corroborated by the large majority of European states,
+    emphasizes “the right and the ability of local authorities, within the limits of the law,
+    to regulate and manage a substantial share of public affairs under their own responsibility and in the interests of the local population”.
+    Implementing and promoting a right to equality should, and must be at the heart of this concept of local self-government.
+    It is a reliable source since it is a law that is already being implemented in parts of Europe.
+
+        </pre>
+    </div>
+    </div>
+  <script>
+    // JavaScript code to handle the slideshow background
+    var images = document.querySelectorAll('.slideshow-image');
+    var currentImageIndex = 0;
+
+    function showNextImage() {
+      // Hide the current image
+      images[currentImageIndex].classList.remove('active');
+
+      // Update the current image index
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+
+      // Show the next image
+      images[currentImageIndex].classList.add('active');
+    }
+
+    // Set the interval to switch images (every 3 seconds in this example)
+    setInterval(showNextImage, 3000);
+  </script>
+</body>
+</html>

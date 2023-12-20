@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quarter 2</title>
+  <style>
+    /* Add some styles to the body */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Add styles for the slideshow container */
+    .slideshow-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Add styles for the slideshow images */
+    .slideshow-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    /* Add styles for the active image */
+    .slideshow-image.active {
+      opacity: 1;
+    }
+
+    /* Create a sticky navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      z-index: 999;
+    }
+
+    /* Add some styles to the navbar links */
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      display: inline-block;
+    }
+
+    .navbar a:hover {
+      
+      background-color: #d7d7d7;
+    }
+
+    .active {
+        background-color: #555;
+    }
+
+    /* Add some padding to the main content */
+    .content {
+      padding-top: 200px;
+      text-align: center;
+    }
+
+    /* Add a cool animation effect to the main content */
+    .content h1 {
+      animation: slideUp 1s ease;
+      font-size: 80px;
+    }
+
+    .content p {
+        font-size: 30px;
+        animation: slideUp 2s ease;
+        color: rgb(0, 0, 0);
+    }
+
+    .content button {
+        width: 250px;
+        height: 50px;
+        background-color: rgb(239, 255, 239);
+        border-radius: 10px;
+        font-size: 30px;
+        animation: slideUp 4s ease;
+    }
+
+    .content pre {
+        animation: slideUp 5s ease;
+        font-size: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /* Define the slideUp animation */
+    @keyframes slideUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Slideshow Background -->
+  <div class="slideshow-container">
+    <img class="slideshow-image active" src="Yes gender ineuqality.png" alt="Image 1">
+    <img class="slideshow-image" src="Cooler.jpg" alt="Image 2">
+    <img class="slideshow-image" src="Better.jpg" alt="Image 3">
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html" class="active">Home</a>
+        <a href="RCA.html">RCA</a>
+        <a href="Solutions.html">Solutions</a>
+        <a href="Outline.html">Outline</a>
+        <a href="Resources.html">Resources</a>
+        <a href="About.html">About us</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="content">
+    <h1>Group 5</h1>
+    <p>Welcome to our website! Check out our old Webpage</p>
+    <button><a href="https://helllooooooooo.github.io/Quarter-1-Group-5s-IPBA-Webpage/index.html" target="_blank">Quarter 1</a></button>
+    <br>
+    <pre>Members: Franchesca Kiss, John Chris, Angel Gavrielle, Aaron Euwan</pre>
+  </div>
+
+  <script>
+    // JavaScript code to handle the slideshow background
+    var images = document.querySelectorAll('.slideshow-image');
+    var currentImageIndex = 0;
+
+    function showNextImage() {
+      // Hide the current image
+      images[currentImageIndex].classList.remove('active');
+
+      // Update the current image index
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+
+      // Show the next image
+      images[currentImageIndex].classList.add('active');
+    }
+
+    // Set the interval to switch images (every 3 seconds in this example)
+    setInterval(showNextImage, 3000);
+  </script>
+</body>
+</html>
